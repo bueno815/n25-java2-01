@@ -5,12 +5,13 @@ import javax.swing.JOptionPane;
 public class Exemplo01 {
 
 	public static void main(String[] args) {
-		String nome = JOptionPane.showInputDialog("Digite se nome: ");
+		String nome = JOptionPane.showInputDialog("Qual seu nome ? ");
 		//mostrando uma mensaguem via janela do Swing
-		JOptionPane.showMessageDialog(null, "Olá, " + nome + ", tudo bem ?");
+		String nomeMeio = JOptionPane.showInputDialog("Agora nome do meio:");
+		String sobrenome = JOptionPane.showInputDialog("Agora sobrenome:");
 		//solicitando a idade das pessoas
-		int idade = Integer.parseInt(JOptionPane.showInputDialog("Digite sua idade: "));
-		JOptionPane.showMessageDialog(null, "Sua idade no ano que vem será " + (idade + 1));
+		int idade = Integer.parseInt(JOptionPane.showInputDialog("Qual seu sobrenome "));
+		JOptionPane.showMessageDialog(null, "Mostrar o nome completo");
 		
 		
 

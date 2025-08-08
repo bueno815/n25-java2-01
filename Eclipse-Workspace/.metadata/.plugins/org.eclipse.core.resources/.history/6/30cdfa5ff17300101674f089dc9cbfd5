@@ -1,0 +1,19 @@
+package br.com.senaisp.bauru.secao03.aula06;
+
+import javax.swing.JOptionPane;
+
+public class Exemplo01 {
+
+	public static void main(String[] args) {
+		String nome = JOptionPane.showInputDialog("Qual seu nome ? ");
+		//mostrando uma mensaguem via janela do Swing
+		JOptionPane.showMessageDialog(null, "Qual seu nome do meio");
+		//solicitando a idade das pessoas
+		int idade = Integer.parseInt(JOptionPane.showInputDialog("Qual seu sobrenome "));
+		JOptionPane.showMessageDialog(null, "Mostrar o nome completo");
+		
+		
+
+	}
+
+}
