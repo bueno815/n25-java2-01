@@ -1,0 +1,22 @@
+package br.com.senaisp.bauru.secao04.aula09;
+
+import java.util.Random;
+
+public class Forca {
+
+		private String palavraSecreta;
+		private String palavraMascarada;
+		private int erros;
+		//numero aleatotio
+		private Random rnd;
+		//constructor
+		public Forca() {
+			rnd = new Random();
+			int linhaEscolhida = rnd.nextInt(180);
+			int linhaAtual = 0;
+			
+		}
+
+	}
+
+
