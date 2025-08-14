@@ -10,6 +10,7 @@ public class CalculoBaskaraText {
 		System.out.println("Digite o lado A: ");
 		ca.setLadoA(sc.nextDouble());
 		
+		
 		System.out.println("Digite o lado B: ");
 		ca.setLadoB(sc.nextDouble());
 		
@@ -21,6 +22,8 @@ public class CalculoBaskaraText {
 		//mostrando x1 e x2
 		System.out.println("O valor de x1 = " + ca.getX1());
 		System.out.println("O valor de x2 = " + ca.getX2());
+		//fechando scanner
+		sc.close();
 		
 
 	}
