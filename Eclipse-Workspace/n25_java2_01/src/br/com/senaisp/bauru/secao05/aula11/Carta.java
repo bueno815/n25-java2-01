@@ -52,10 +52,10 @@ public class Carta {
 				     "║  *  ║\n" + //3
 				     "║   ##║\n" +//4
 				     "╙─────╜";  //5
-		String spc = getNumero().equals("10") ? " " : " ";
-		ret = ret.replaceFirst("##", getNumero() + " ");
+		String spc = getNumero().equals("10") ? "" : " ";
+		ret = ret.replaceFirst("##", getNumero() + spc);
 		ret = ret.replace("*", getNaipe());
-		ret = ret.replace("##" , " " + getNumero());
+		ret = ret.replace("##" , spc + getNumero());
 		return ret;
 	}
 	
