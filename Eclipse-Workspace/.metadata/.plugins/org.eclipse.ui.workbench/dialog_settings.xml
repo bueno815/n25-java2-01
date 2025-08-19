@@ -23,11 +23,12 @@
 			<item value="org.eclipse.ui.commands"/>
 		</list>
 		<list key="textEntries">
-			<item value="1"/>
+			<item value="2"/>
 			<item value="1"/>
 		</list>
 		<list key="textArray">
 			<item value="getter"/>
+			<item value="gette"/>
 			<item value="gett"/>
 		</list>
 	</section>
