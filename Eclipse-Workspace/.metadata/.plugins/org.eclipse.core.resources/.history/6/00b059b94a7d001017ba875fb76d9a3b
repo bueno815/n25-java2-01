@@ -1,0 +1,9 @@
+package br.com.senaisp.bauru.secao08.aula13;
+
+import java.util.ArrayList;
+
+public class BlackJackGame {
+	private Baralho bar;
+	private ArrayList<BlackJackPlayer> players;
+
+}
