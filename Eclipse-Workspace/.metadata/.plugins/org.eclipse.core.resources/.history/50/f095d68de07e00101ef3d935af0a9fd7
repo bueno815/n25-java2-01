@@ -1,0 +1,16 @@
+package br.com.senaisp.bauru.secao08.aula15;
+
+public class PessoaJuridica extends Pessoa {
+	public PessoaJuridica(){
+		super();//usando o constructor da classe pai
+		setTipoPessoa('J');
+	}
+	//fechando constructor
+	//constructor com 
+	public PessoaJuridica(String nom, String doc,String ende, String dtNas) {
+		super(nom, doc, ende, dtNas);
+		setTipoPessoa('J');//usando o constructor da classe pai
+	}
+
+
+}

@@ -10,7 +10,7 @@ public class BlackJackPlayer {
 	private boolean perdedor;
 	private boolean ganhador;
 	private boolean parou;
-	//constructor
+	//Constructor
 	public BlackJackPlayer() {
 		cartas = new ArrayList<Carta>();
 		perdedor = false;
@@ -52,5 +52,4 @@ public class BlackJackPlayer {
 		}
 		return tot;
 	}
-
 }
