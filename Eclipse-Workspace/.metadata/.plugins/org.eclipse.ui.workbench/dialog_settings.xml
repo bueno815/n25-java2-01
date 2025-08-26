@@ -24,9 +24,9 @@
 			<item value="3"/>
 		</list>
 		<list key="textArray">
-			<item value="getter"/>
 			<item value="gett"/>
 			<item value="gette"/>
+			<item value="get"/>
 		</list>
 	</section>
 </section>
