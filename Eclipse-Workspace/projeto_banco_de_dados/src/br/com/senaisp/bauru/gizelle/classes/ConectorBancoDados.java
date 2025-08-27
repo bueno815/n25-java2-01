@@ -1,14 +1,42 @@
 package br.com.senaisp.bauru.gizelle.classes;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
+
 public class ConectorBancoDados {
 	private static ConectorBancoDados instancia = null;
 	private String connStr;
-	private ConectorBancoDados() {
-		connStr = "Sou a string de conexão";
-				//Isso é chamado pattern Singleton
+	//objeto de conexao SQL
+	private Connection conn;
+	private ConectorBancoDados() throws SQLException {
+		connStr = "jdbc:sqlite:c:\\javalibs\\producao.db";
+		conn = DriverManager.getConnection(connStr);
+		criarEstrutura();
+	}
+		private void criarEstrutura() {
+			String tabela = """
+				CREATE TABLE IF NOT EXISTS produto (
+					    id        INTEGER         PRIMARY KEY AUTOINCREMENT
+					                              NOT NULL,
+					    descricao TEXT (100)      NOT NULL,
+					    saldo     NUMERIC (15, 2) NOT NULL,
+					    preco     NUMERIC (15, 2) NOT NULL
+					);
+					
+				""";
+			try {
+				Statement stmt = conn.createStatement();
+				stmt.execute(tabela);
+				
+			}catch(Exception e) {
+				e.printStackTrace();
+			}
+
 			}
 	//Isso é chamado pattern Singleton
-			public static ConectorBancoDados getIntancia() {
+			public static ConectorBancoDados getInstancia() throws SQLException {
 				if (instancia ==null) {
 					instancia = new ConectorBancoDados();
 				}
