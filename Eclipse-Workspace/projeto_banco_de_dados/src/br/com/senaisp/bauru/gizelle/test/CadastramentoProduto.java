@@ -58,6 +58,10 @@ public class CadastramentoProduto {
                 	 prod.atualizarBanco();
                  }
                  //falta continua s/n
+                  conf = confirmarOperacao("Deseja continuar alterando? (S/N)",sc);
+                  if (conf.toLowerCase().equals("n")) {
+                	  break;
+                  }
 			} else {
 				System.out.println("Produto não encontrado!");
 			}
@@ -65,9 +69,26 @@ public class CadastramentoProduto {
 
 	}
 
-	private static Object excluirProduto(Scanner sc) {
-		// TODO Auto-generated method stub
-		return null;
+	private static void excluirProduto(Scanner sc) {
+		do {
+			Produto prod = pesquisarProduto(sc);
+			if (prod != null) {
+				mostrarProduto(prod);
+				String conf = confirmarOperacao("Deseja excluir o registro? (S/N)",sc);
+                 if (conf.toLowerCase().equals("s")) {
+                	 prod.apagarRegistro();
+                 }
+                 //falta continua s/n
+                  conf = confirmarOperacao("Deseja continuar excluindo? (S/N)",sc);
+                  if (conf.toLowerCase().equals("n")) {
+                	  break;
+                  }
+			} else {
+				System.out.println("Produto não encontrado!");
+			}
+		} while (true);
+
+		
 	}
 
 	private static void consultarProduto(Scanner sc) {
@@ -98,6 +119,7 @@ public class CadastramentoProduto {
 			System.out.println("Digite o id a ser pesquisado:");
 			try {
 				int pId = sc.nextInt();
+				sc.nextLine(); //capturar o enter
 				prod = Produto.consultarProdutoPorId(pId);
 				break;
 			} catch (InputMismatchException e) {
@@ -158,6 +180,7 @@ public class CadastramentoProduto {
 
 		System.out.println("Digite o preço:");
 		prod.setPreco(sc.nextDouble());
+		sc.nextLine(); //capturar o enter
 	}
 
 	private static String confirmarOperacao(String msg, Scanner sc) {

@@ -1,0 +1,7 @@
+package br.com.senaisp.bauru;
+
+import javafx.application.Application;
+
+public class JavaFX_Main extends Application  {
+
+}

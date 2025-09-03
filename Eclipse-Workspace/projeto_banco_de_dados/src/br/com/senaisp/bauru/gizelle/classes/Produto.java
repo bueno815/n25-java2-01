@@ -96,10 +96,6 @@ public class Produto {
 				PreparedStatement stmt = conn.getConnection().prepareStatement(sql);
 				// passando os parametros para o sql
 				stmt.setInt(1, id);
-				stmt.setString(1, getDescricao());
-				stmt.setDouble(2, getSaldo());
-				stmt.setDouble(3, getPreco());
-				stmt.setInt(4, id);
 				// executando a query
 				int numLin = stmt.executeUpdate();
 				System.out.println("Foram afetadas " + numLin + "linhas");
