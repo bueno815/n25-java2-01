@@ -57,7 +57,12 @@ public class ManipuladorlmagensApp extends Application {
 		btnPlay.setOnAction((ev)-> { mp.pause();});
 		btnPlay.setOnAction((ev)-> { mp.stop();});
 		//adicionando no no root
-		noRoot.getChildren().addAll(mvw, btnPlay, btnPause, btnStop);
+		//criando o Duke
+		Duke duk = new Duke();
+		duk.setLayoutX(20);
+		duk.setLayoutY(20);
+		noRoot.getChildren().addAll(mvw, btnPlay, btnPause, btnStop, duk);
+		
 	}
 
 }
